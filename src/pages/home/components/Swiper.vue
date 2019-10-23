@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper>
       <!-- slides -->
       <swiper-slide v-for="item of swiperList" :key="item.id"><img class="swiper-img" :src=item.imgUrl></swiper-slide>
       <!-- Optional controls -->
@@ -46,7 +46,6 @@ export default {
     width :100%
     height :0
     padding-bottom :31.25%
-    background-color :#eee
     .swiper-img
       width :100%
 </style>
