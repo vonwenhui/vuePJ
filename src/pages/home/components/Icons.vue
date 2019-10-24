@@ -54,6 +54,8 @@ export default {
     height :0
     padding-bottom :50%
     margin :.1rem 0
+  .icons
+    margin-top :.2rem
     .icon
       position :relative
       width :25%
@@ -78,5 +80,5 @@ export default {
         line-height :.44rem
         color :$darkTextColor
         text-align :center
-        // ellipsis()
+        ellipsis()
 </style>
