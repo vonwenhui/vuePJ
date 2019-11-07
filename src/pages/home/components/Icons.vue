@@ -16,25 +16,13 @@
 <script>
 export default {
   name: 'HomeIcons',
-  data: function () {
-    return {
-      iconLists: [
-        {id: '001', name: '酒店', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-        {id: '002', name: '机票', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/flight.png'},
-        {id: '003', name: '度假', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/package.png'},
-        {id: '004', name: '火车票', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/train.png'},
-        {id: '005', name: '景点门票', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/piao.png'},
-        {id: '006', name: '酒店', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-        {id: '007', name: '酒店', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-        {id: '008', name: '酒店', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png'},
-        {id: '009', name: '第二屏', iconUrl: '//s.qunarzz.com/homenode/images/touchheader/hotel.png'}
-      ]
-    }
+  props: {
+    lists: Array
   },
   computed: {
     pages () {
       const pages = []
-      this.iconLists.forEach((item, index) => {
+      this.lists.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

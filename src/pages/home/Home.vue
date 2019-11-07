@@ -3,8 +3,8 @@
     <home-header :city="city"></home-header>
     <home-swiper :lists="swiperLists"></home-swiper>
     <home-icons :lists="iconLists"></home-icons>
-    <home-recommend :list="recommendLists"></home-recommend>
-    <home-weekend :list="weekendLists"></home-weekend>
+    <home-recommend :lists="recommendLists"></home-recommend>
+    <home-weekend :lists="weekendLists"></home-weekend>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.jason').then(this.getHomeInfoSucc)
+      axios.get('/api/index.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       res = res.data
@@ -49,7 +49,6 @@ export default {
         this.recommendLists = res.data.recommendLists
         this.weekendLists = res.data.weekendLists
       }
-      console.log(res)
     }
   }
 }
