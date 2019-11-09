@@ -65,7 +65,7 @@ export default {
   methods: {
     ...mapMutations(['changeCity']),
     handleCityClick (cityName) {
-      this.changCity(cityName)
+      this.changeCity(cityName)
       this.$router.push('/')
     }
   }
