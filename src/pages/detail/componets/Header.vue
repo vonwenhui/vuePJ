@@ -34,8 +34,13 @@ export default {
       }
     }
   },
+  // 使用keep-alive后会增加actived和deactived两个生命周期钩子
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 页面隐藏时要解绑window事件
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
